@@ -19,5 +19,37 @@
             <a href="{% url 'register_page' %}"><button>Register</button></a>
         </div>
     </header>
+    <!--
+    <div class="user-list">
+        <h2>User List</h2>
+        <div class="user-container">
+            {% for user in users %}
+                <div class="user-box">
+                    <h3>{{ user.user_nickname }}</h3>
+                    <p>{{ user.user_name }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>Contact us: info@example.com | +123 456 7890</p>
+            </div>
+            <div class="footer-contact">
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td>info@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td>+123 456 7890</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

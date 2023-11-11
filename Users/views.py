@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import User
+from Users.models import User
 
 def register_page(request):
     return render(request, 'Users/register_page.html')
@@ -27,6 +27,7 @@ def register(request):
         return render(request, 'Core/index.html')
 
     return render(request, 'Core/index.html')
+
 
 
 

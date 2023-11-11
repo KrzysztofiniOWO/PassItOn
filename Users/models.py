@@ -9,3 +9,5 @@ class User(models.Model):
     user_e_mail = models.EmailField(max_length=50)
     user_password = models.CharField(max_length=30)
     date_of_birth = models.DateField()
+
+    objects = models.Manager()
