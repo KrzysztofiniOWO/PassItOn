@@ -72,8 +72,46 @@ header {
     border: none;
 }
 
+/* Add offer button */
+.add-offer-button {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.add-offer-button button {
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: #ff8364;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
+/* Go back button */
+.go-back-button {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.go-back-button button {
+    margin-top: 20px;
+    margin-left: 30px;
+    background-color: #ff8364;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+
 /* Register form */
-form {
+.user-registration-form {
     margin: 50px 0px;
     display: flex;
     flex-direction: column;
@@ -86,25 +124,24 @@ form {
     align-self: center;
 }
 
-
-form h2 {
+.user-registration-form h2 {
     text-align: center;
     margin-bottom: 20px;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
-label {
+.user-registration-form label {
     width: 100%;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"],
-input[type="submit"] {
+.user-registration-form input[type="text"],
+.user-registration-form input[type="email"],
+.user-registration-form input[type="password"],
+.user-registration-form input[type="date"],
+.user-registration-form input[type="submit"] {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 5px 0;
@@ -116,7 +153,7 @@ input[type="submit"] {
     font-size: 20px;
 }
 
-input[type="submit"] {
+.user-registration-form input[type="submit"] {
     width: 100%;
     background-color: #ffb677;
     color: white;
@@ -124,6 +161,58 @@ input[type="submit"] {
     font-size: 20px;
     cursor: pointer;
 }
+
+/* Add offer form */
+.add-offer-form {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    padding: 20px;
+    border: 3px solid #ff8364;
+    border-radius: 10px;
+    background-color: #5f6caf;
+}
+
+.add-offer-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.add-offer-form label {
+    width: 100%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.add-offer-form input[type="text"],
+.add-offer-form input[type="number"],
+.add-offer-form input[type="file"],
+.add-offer-form textarea,
+.add-offer-form input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px 0;
+    border: 2px solid #ff8364;
+    border-radius: 5px;
+    background-color: #ffb677;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.add-offer-form input[type="submit"] {
+    width: 100%;
+    background-color: #ffb677;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 
 /* Footer */
 footer {

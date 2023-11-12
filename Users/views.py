@@ -21,11 +21,8 @@ def register(request):
             user_password=user_password,
             date_of_birth=date_of_birth
         )
-
         user.save()
-
         return render(request, 'Core/index.html')
-
     return render(request, 'Core/index.html')
 
 
