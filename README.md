@@ -1,2 +1,2 @@
 # PassItOn
-Webpage to give away items you don't need
+Webpage to sell for cheap items you don't need
