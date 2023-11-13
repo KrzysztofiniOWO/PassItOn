@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from Users.models import User
+from Offers.models import Offer
 
 def register_page(request):
     return render(request, 'Users/register_page.html')
 
 def register(request):
+    offers = Offer.objects.all().order_by('-item_name')[:10]
+
     if request.method == 'POST':
         user_nickname = request.POST.get('user_nickname')
         user_name = request.POST.get('user_name')
@@ -22,8 +25,8 @@ def register(request):
             date_of_birth=date_of_birth
         )
         user.save()
-        return render(request, 'Core/index.html')
-    return render(request, 'Core/index.html')
+        return render(request, 'Core/index.html', {'offers': offers})
+    return render(request, 'Core/index.html', {'offers': offers})
 
 
 

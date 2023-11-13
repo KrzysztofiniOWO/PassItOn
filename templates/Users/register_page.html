@@ -19,6 +19,11 @@
             <a href="{% url 'register_page' %}"><button>Register</button></a>
         </div>
     </header>
+    <a href="{% url 'index' %}" class="go-back-link">
+        <div class="go-back-button">
+            <button class="go-back-button">Go back</button>
+        </div>
+    </a>
     <form method="post" action="{% url 'register' %}" class="user-registration-form">
         {% csrf_token %}
         <h2>User Registration</h2>

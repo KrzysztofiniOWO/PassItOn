@@ -1,3 +1,23 @@
+/* Colors i use
+
+.first-color { 
+	background: #edf7fa; whitish
+}
+	
+.second-color { 
+	background: #5f6caf; purplish
+}
+
+.third-color { 
+	background: #ffb677; light orange
+}
+
+.fourth-color { 
+	background: #ff8364; dark orange
+}
+
+*/
+
 /* Reset default */
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, li {
     margin: 0;
@@ -213,6 +233,61 @@ header {
     cursor: pointer;
 }
 
+/* Offer list header */
+.offer-list-header {
+    text-align: center;
+    margin: 20px 0;/
+}
+
+.offer-list-header h2 {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    border: 5px solid #5f6caf;
+    background-color: #ffb677;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0;
+}
+
+/* List of offers */
+.offer-list {
+    padding: 15px;
+}
+
+.offer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.offer-box {
+    border: 5px solid #5f6caf;
+    padding: 15px;
+    flex: 1 1 300px;
+    background-color: #ffb677;
+    color: black;
+    border-radius: 8px;
+}
+
+.offer-box img {
+    width: 50%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.offer-box h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.offer-box p {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 8px;
+}
+
+.offer-box p:first-child {
+    margin-top: 0;
+}
 
 /* Footer */
 footer {
