@@ -8,3 +8,5 @@ class Offer(models.Model):
     item_date_added = models.DateTimeField(auto_now_add = True)
     item_image = models.ImageField(upload_to ='uploaded_images/')
     item_price = models.FloatField()
+
+    objects = models.Manager()

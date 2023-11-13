@@ -24,19 +24,22 @@
             <button>Add offer +</button>
         </div>
     </a>
-    <!--
-    <div class="user-list">
-        <h2>User List</h2>
-        <div class="user-container">
-            {% for user in users %}
-                <div class="user-box">
-                    <h3>{{ user.user_nickname }}</h3>
-                    <p>{{ user.user_name }}</p>
+    <div class="offer-list-header">
+        <h2>Offer List</h2>
+    </div>
+    <div class="offer-list">
+        <div class="offer-container">
+            {% for offer in offers %}
+                <div class="offer-box">
+                    <img src="{{ offer.item_image.url }}" alt="{{ offer.item_name }}">
+                    <h3>{{ offer.item_name }}</h3>
+                    <p>{{ offer.item_description }}</p>
+                    <p>Price: ${{ offer.item_price }}</p>
+                    <p>Date Added: {{ offer.item_date_added }}</p>
                 </div>
             {% endfor %}
         </div>
     </div>
-    -->
     <footer>
         <div class="footer-content">
             <div class="footer-text">
