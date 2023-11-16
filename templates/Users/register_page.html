@@ -15,7 +15,7 @@
             </div>
         </a>
         <div class="header-right">
-            <button>Login</button>
+            <a href="{% url 'login_page' %}"><button>Login</button></a>
             <a href="{% url 'register_page' %}"><button>Register</button></a>
         </div>
     </header>
@@ -24,7 +24,7 @@
             <button class="go-back-button">Go back</button>
         </div>
     </a>
-    <form method="post" action="{% url 'register' %}" class="user-registration-form">
+    <form method="post" action="{% url 'register_action' %}" class="user-registration-form">
         {% csrf_token %}
         <h2>User Registration</h2>
     
