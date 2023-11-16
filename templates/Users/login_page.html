@@ -19,27 +19,23 @@
             <a href="{% url 'register_page' %}"><button>Register</button></a>
         </div>
     </header>
-    <a href="{% url 'add_offer_page' %}" class="add-offer-link">
-        <div class="add-offer-button">
-            <button>Add offer +</button>
+    <a href="{% url 'index' %}" class="go-back-link">
+        <div class="go-back-button">
+            <button class="go-back-button">Go back</button>
         </div>
     </a>
-    <div class="offer-list-header">
-        <h2>Offer List</h2>
-    </div>
-    <div class="offer-list">
-        <div class="offer-container">
-            {% for offer in offers %}
-                <div class="offer-box">
-                    <img src="{{ offer.item_image.url }}" alt="{{ offer.item_name }}">
-                    <h3>{{ offer.item_name }}</h3>
-                    <p>{{ offer.item_description }}</p>
-                    <p>Price: ${{ offer.item_price }}</p>
-                    <p>Date Added: {{ offer.item_date_added }}</p>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+    <form method="post" action="{% url 'login_action' %}" class="user-login-form">
+        {% csrf_token %}
+        <h2>User Login</h2>
+    
+        <label for="user_nickname">Username:</label>
+        <input type="text" id="user_nickname" name="user_nickname" required><br><br>
+    
+        <label for="user_password">Password:</label>
+        <input type="password" id="login_password" name="user_password" required><br><br>
+    
+        <input type="submit" value="Login">
+    </form>
     <footer>
         <div class="footer-content">
             <div class="footer-text">

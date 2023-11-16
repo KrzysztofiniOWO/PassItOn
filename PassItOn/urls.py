@@ -26,7 +26,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.index, name='index'),
     path('register_page/', user_views.register_page, name='register_page'),
-    path('register/', user_views.register, name='register'),
+    path('register_action/', user_views.register_action, name='register_action'),
+    path('login_page/', user_views.login_page, name='login_page'),
+    path('login_action/', user_views.login_action, name='login_action'),
     path('add_offer_page/', offer_views.add_offer_page, name='add_offer_page'),
     path('add_offer/', offer_views.add_offer, name='add_offer'),
 ]
