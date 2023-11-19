@@ -132,7 +132,7 @@ header {
 
 /* Register form */
 .user-registration-form {
-    margin: 50px 0px;
+    margin: 50px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -141,7 +141,6 @@ header {
     border: 3px solid #ff8364;
     border-radius: 10px;
     background-color: #5f6caf;
-    align-self: center;
 }
 
 .user-registration-form h2 {
@@ -155,6 +154,7 @@ header {
     width: 100%;
     color: white;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
 }
 
 .user-registration-form input[type="text"],
@@ -170,7 +170,7 @@ header {
     background-color: #ffb677;
     color: white;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* Login form */
