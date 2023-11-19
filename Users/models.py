@@ -1,13 +1,8 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-class User(models.Model):
-    """A class to represent single item"""
-    user_id = models.AutoField(primary_key=True)
-    user_nickname = models.CharField(max_length=30)
-    user_name = models.CharField(max_length=30)
-    user_surname = models.CharField(max_length=30)
-    user_e_mail = models.EmailField(max_length=50)
-    user_password = models.CharField(max_length=30)
-    date_of_birth = models.DateField()
+class CustomUser(AbstractUser):
+    date_of_birth = models.DateField(null=True, blank=True)
 
-    objects = models.Manager()
+    groups = models.ManyToManyField('auth.Group', related_name='customuser_set', blank=True)
+    user_permissions = models.ManyToManyField('auth.Permission', related_name='customuser_set', blank=True)
