@@ -15,8 +15,15 @@
             </div>
         </a>
         <div class="header-right">
-            <a href="{% url 'login_page' %}"><button>Login</button></a>
-            <a href="{% url 'register_page' %}"><button>Register</button></a>
+            {% if user.is_authenticated %}
+                <div class="user-info">
+                    <p class="hello-text">Hello {{ user.username }}</p>
+                    <a href="{% url 'logout_action' %}" class="logout-btn">Logout</a>
+                </div>
+            {% else %}
+                <a href="{% url 'login_page' %}" class="login-btn">Login</a>
+                <a href="{% url 'register_page' %}" class="register-btn">Register</a>
+            {% endif %}
         </div>
     </header>
     <footer>
