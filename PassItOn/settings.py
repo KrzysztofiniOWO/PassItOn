@@ -44,6 +44,19 @@ INSTALLED_APPS = [
     'Users',
 ]
 
+AUTHENTICATION_BACKENDS =[
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+AUTH_USER_MODEL = 'Users.CustomUser'
+
+MIDDLEWARE_CLASSES = (
+    '...',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.RemoteUserMiddleware',
+    '...',
+)
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -123,7 +136,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
 MEDIA_URL = '/uploaded_images/'
-MEDIA_ROOT = BASE_DIR / "uploaded_images"  # Adjust the path based on your project structure
+MEDIA_ROOT = BASE_DIR / "uploaded_images"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

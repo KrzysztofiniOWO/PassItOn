@@ -1,4 +1,9 @@
-from django.shortcuts import render
+from django.contrib.auth import authenticate as auth_authenticate, login as auth_login
+from django.contrib.auth.hashers import check_password
+from django.shortcuts import render, redirect
+from django.contrib import messages
+
+
 from Users.models import CustomUser
 from Offers.models import Offer
 
@@ -31,18 +36,25 @@ def register_action(request):
 
     return render(request, 'Users/register_page', {'offers': offers})
 
-# def login_page(request):
-#     return render(request, 'Users/login_page.html')
 
-# def login_action(request):
-#     if request.method == 'POST':
-#         post_user_nickname = request.POST.get('user_nickname')
-#         post_user_password = request.POST.get('user_password')
+def login_page(request):
+    return render(request, 'Users/login_page.html')
 
-#         user = User.objects.filter(user_nickname=post_user_nickname).first()
+def login_action(request):
+    print("Login action triggered")
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
-#         if user and (post_user_password == user.user_password):
-#             offers = Offer.objects.all().order_by('-item_name')[:10]
-#             return render(request, 'Core/index.html', {'offers': offers})
-        
-#     return render(request, 'Users/login_page.html')
+        user = auth_authenticate(request, username=username, password=password)
+
+        #user = CustomUser.objects.get(username=username)
+        if user is not None:
+        #if check_password(password, user.password):
+            auth_login(request, user)
+            return redirect('index')
+        else:
+            messages.error(request, 'Invalid username or password')
+
+    print("Login action completed")
+    return render(request, 'Users/login_page.html')
