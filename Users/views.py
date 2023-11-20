@@ -1,5 +1,4 @@
-from django.contrib.auth import authenticate as auth_authenticate, login as auth_login
-from django.contrib.auth.hashers import check_password
+from django.contrib.auth import authenticate as auth_authenticate, login as auth_login, logout as auth_logout
 from django.shortcuts import render, redirect
 from django.contrib import messages
 
@@ -48,9 +47,7 @@ def login_action(request):
 
         user = auth_authenticate(request, username=username, password=password)
 
-        #user = CustomUser.objects.get(username=username)
         if user is not None:
-        #if check_password(password, user.password):
             auth_login(request, user)
             return redirect('index')
         else:
@@ -58,3 +55,7 @@ def login_action(request):
 
     print("Login action completed")
     return render(request, 'Users/login_page.html')
+
+def logout_action(request):
+    auth_logout(request)
+    return redirect('index')
