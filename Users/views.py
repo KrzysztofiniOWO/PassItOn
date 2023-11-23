@@ -10,7 +10,6 @@ def register_page(request):
     return render(request, 'Users/register_page.html')
 
 def register_action(request):
-    offers = Offer.objects.all().order_by('-item_name')[:10]
     if request.method == 'POST':
         username = request.POST.get('username') #191 chars or fewer
         first_name = request.POST.get('first_name') #150 chars or fewer
@@ -31,9 +30,9 @@ def register_action(request):
             is_active=True,
         )
 
-        return render(request, 'Core/index.html', {'offers': offers})
+        return render(request, 'Core/index.html')
 
-    return render(request, 'Users/register_page', {'offers': offers})
+    return render(request, 'Users/register_page')
 
 
 def login_page(request):

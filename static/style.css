@@ -434,6 +434,7 @@ footer {
 
 .footer-content p {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 footer table {
@@ -443,6 +444,7 @@ footer table {
 footer table td {
     padding: 5px;
     text-align: left;
+    font-family: 'Roboto', sans-serif;
 }
 
 main {

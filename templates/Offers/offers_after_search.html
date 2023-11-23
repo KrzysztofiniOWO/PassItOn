@@ -26,18 +26,26 @@
             {% endif %}
         </div>
     </header>
-    <a href="{% url 'add_offer_page' %}" class="add-offer-link">
-        <div class="add-offer-button">
-            <button>Add offer +</button>
+    <a href="{% url 'index' %}" class="go-back-link">
+        <div class="go-back-button">
+            <button class="go-back-button">Go back</button>
         </div>
     </a>
-    <div class="search-container">
-        <p class="search-text">What are you looking for?</p>
-        <form method="GET" action="{% url 'offers_after_search_page' %}" class="search-form">
-            {% csrf_token %}
-            <input type="text" name="search_query" class="search-input" placeholder="Search...">
-            <button type="submit" class="search-btn">Search</button>
-        </form>
+    <div class="offer-list-header">
+        <h2>Offer List</h2>
+    </div>
+    <div class="offer-list">
+        <div class="offer-container">
+            {% for offer in offers %}
+                <div class="offer-box">
+                    <img src="{{ offer.item_image.url }}" alt="{{ offer.item_name }}">
+                    <h3>{{ offer.item_name }}</h3>
+                    <p>{{ offer.item_description }}</p>
+                    <p>Price: ${{ offer.item_price }}</p>
+                    <p>Date Added: {{ offer.item_date_added }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </div>
     <footer>
         <div class="footer-content">
