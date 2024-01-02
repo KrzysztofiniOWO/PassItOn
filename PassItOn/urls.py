@@ -33,6 +33,7 @@ urlpatterns = [
     path('add_offer_page/', offer_views.add_offer_page, name='add_offer_page'),
     path('add_offer/', offer_views.add_offer, name='add_offer'),
     path('offers_after_search_page/', offer_views.offers_after_search_page, name='offers_after_search_page'),
+    path('profile_page/', user_views.profile_page, name='profile_page'),
 ]
 
 if settings.DEBUG:

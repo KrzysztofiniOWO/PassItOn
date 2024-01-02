@@ -18,6 +18,7 @@
             {% if user.is_authenticated %}
                 <div class="user-info">
                     <p class="hello-text">Hello {{ user.username }}</p>
+                    <a href="{% url 'profile_page' %}" class="profile-btn">Your profile</a>
                     <a href="{% url 'logout_action' %}" class="logout-btn">Logout</a>
                 </div>
             {% else %}
