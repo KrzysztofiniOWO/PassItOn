@@ -9,6 +9,9 @@ from Offers.models import Offer
 def register_page(request):
     return render(request, 'Users/register_page.html')
 
+def profile_page(request):
+    return render(request, 'Users/profile_page.html')
+
 def register_action(request):
     if request.method == 'POST':
         username = request.POST.get('username') #191 chars or fewer
