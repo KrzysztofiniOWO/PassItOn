@@ -9,9 +9,6 @@ from Offers.models import Offer
 def register_page(request):
     return render(request, 'Users/register_page.html')
 
-def profile_page(request):
-    return render(request, 'Users/profile_page.html')
-
 def register_action(request):
     if request.method == 'POST':
         username = request.POST.get('username') #191 chars or fewer
@@ -61,3 +58,9 @@ def login_action(request):
 def logout_action(request):
     auth_logout(request)
     return redirect('index')
+
+def profile_page(request):
+    return render(request, 'Users/profile_page.html')
+
+def edit_info_page(request):
+    return render(request, 'Users/edit_info_page.html')

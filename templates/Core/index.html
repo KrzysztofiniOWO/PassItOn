@@ -27,11 +27,11 @@
             {% endif %}
         </div>
     </header>
-    <a href="{% url 'add_offer_page' %}" class="add-offer-link">
-        <div class="add-offer-button">
+    <div class="add-offer-button">
+        <a href="{% url 'add_offer_page' %}" class="add-offer-link">
             <button>Add offer +</button>
-        </div>
-    </a>
+        </a>
+    </div>
     <div class="search-container">
         <p class="search-text">What are you looking for?</p>
         <form method="GET" action="{% url 'offers_after_search_page' %}" class="search-form">

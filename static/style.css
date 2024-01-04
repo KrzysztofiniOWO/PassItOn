@@ -109,13 +109,14 @@ header {
 
 /* Add offer button */
 .add-offer-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-top: 10px;
     margin-left: 20px;
 }
 
 .add-offer-button button {
-    margin-top: 20px;
-    margin-left: 30px;
     background-color: #ff8364;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -124,12 +125,21 @@ header {
     border-radius: 4px;
     cursor: pointer;
     border: none;
+    margin-top: 20px;
+    margin-left: 30px;
+    outline: none;
 }
 
 /* Go back button */
 .go-back-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
     margin-top: 10px;
     margin-left: 20px;
+    max-height: 100vh;
+    text-decoration: none;
 }
 
 .go-back-button button {
@@ -138,13 +148,41 @@ header {
     background-color: #ff8364;
     color: white;
     font-family: 'Roboto', sans-serif;
+    padding: 16px 32px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Edit info button */
+.edit-info-button {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Adjust as needed for your layout */
+}
+
+.edit-info-link {
+    text-decoration: none; /* Remove underlines on the link */
+    color: inherit; /* Use the inherit color from the parent */
+}
+
+.edit-info-button button {
+    background-color: #ff8364;
+    color: white;
+    font-family: 'Roboto', sans-serif;
     padding: 15px 20px;
     font-size: 18px;
     border-radius: 4px;
     cursor: pointer;
     border: none;
+    margin-left: 20px; /* Adjust the left margin as needed */
+    outline: none; /* Remove the default focus outline */
 }
 
+/* User registration form */
 .user-registration-form {
     margin: 50px auto;
     display: flex;
