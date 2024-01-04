@@ -27,11 +27,11 @@
             {% endif %}
         </div>
     </header>
-    <a href="{% url 'index' %}" class="go-back-link">
-        <div class="go-back-button">
-            <button class="go-back-button">Go back</button>
-        </div>
-    </a>
+    <div class="go-back-button">
+        <a href="{% url 'index' %}" class="go-back-button">
+            <button class="go-back-link">Go back</button>
+        </a>
+    </div>
     <form method="post" action="{% url 'add_offer' %}" enctype="multipart/form-data" class="add-offer-form">
         {% csrf_token %}
         <h2>Add Offer</h2>
