@@ -35,7 +35,7 @@ urlpatterns = [
     path('offers_after_search_page/', offer_views.offers_after_search_page, name='offers_after_search_page'),
     path('profile_page/', user_views.profile_page, name='profile_page'),
     path('edit_info_page/', user_views.edit_info_page, name='edit_info_page'),
-    #path('edit_info_action/', user_views.edit_info_action, name='edit_info_action'),
+    path('edit_info_action/', user_views.edit_info_action, name='edit_info_action'),
 ]
 
 if settings.DEBUG:
