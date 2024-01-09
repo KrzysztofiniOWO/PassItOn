@@ -64,3 +64,16 @@ def profile_page(request):
 
 def edit_info_page(request):
     return render(request, 'Users/edit_info_page.html')
+
+def edit_info_action(request):
+    if request.method == 'POST':
+        user = request.user
+        user.first_name = request.POST.get('first_name')
+        user.last_name = request.POST.get('last_name')
+        user.email = request.POST.get('email')
+        user.date_of_birth = request.POST.get('date_of_birth')
+        user.save()
+        messages.success(request, 'Profile updated successfully.')
+        return render(request, 'Users/profile_page.html')
+
+    return render(request, 'Users/edit_info_page.html')

@@ -32,6 +32,26 @@
             <button class="go-back-link">Go back</button>
         </a>
     </div>
+    <div class="edit-profile-form">
+        <h2>Edit Profile</h2>
+        <form action="{% url 'edit_info_action' %}" method="post">
+            {% csrf_token %}
+            
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name" value="{{ user.first_name }}">
+            
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name" value="{{ user.last_name }}">
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ user.email }}">
+            
+            <label for="date_of_birth">Date of Birth</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" value="{{ user.date_of_birth|date }}">
+            
+            <input type="submit" value="Update Profile">
+        </form>
+    </div>
     <footer>
         <div class="footer-content">
             <div class="footer-text">
